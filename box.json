@@ -25,8 +25,7 @@
     },
     "scripts":{
         "postVersion":"package set location='elpete/semantic-release-playground#v`package version`'",
-        "onRelease":"publish",
-        "postPublish":"!git push && !git push --tags"
+        "onRelease":"publish"
     },
     "ignore":[
         "**/.*",

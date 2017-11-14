@@ -1,0 +1,35 @@
+{
+    "name":"semantic-release-playground",
+    "version":"0.0.0",
+    "author":"",
+    "location":"elpete/semantic-release-playground#v0.0.0",
+    "homepage":"https://github.com/elpete/semantic-release-playground",
+    "documentation":"https://github.com/elpete/semantic-release-playground",
+    "repository":{
+        "type":"git",
+        "URL":"https://github.com/elpete/semantic-release-playground"
+    },
+    "bugs":"https://github.com/elpete/semantic-release-playground/issues",
+    "slug":"semantic-release-playground",
+    "shortDescription":"Verifying that commandbox-semantic-release is working",
+    "description":"Verifying that commandbox-semantic-release is working",
+    "type":"modules",
+    "dependencies":{},
+    "devDependencies":{
+        "testbox":"^2.4.0+80"
+    },
+    "installPaths":{
+        "testbox":"testbox",
+        "coldbox":"tests/resources/app/coldbox"
+    },
+    "scripts":{
+        "postVersion":"package set location='elpete/semantic-release-playground#v`package version`'",
+        "onRelease":"publish",
+        "postPublish":"!git push && !git push --tags"
+    },
+    "ignore":[
+        "**/.*",
+        "test",
+        "tests"
+    ]
+}
